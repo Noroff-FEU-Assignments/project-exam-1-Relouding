@@ -294,6 +294,28 @@ label {
     display: none;
 }
 
+.per-page {
+    font-size: 15px;
+
+    /* Margin/Padding */
+    margin: auto;
+    padding: auto; 
+    
+    /* Size */
+    max-width: 100%;
+    width: 800px;
+    
+    /* Placing */
+    top: 100px;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+.per-page button {
+    width: 150px;
+}
+
 /* Media rules */
 @media only screen and (max-width: 600px) {
     .blog-name {

@@ -1,20 +1,36 @@
-const baseUrl = "https://wordpress.relouding.eu/wp-json/wp/v2/posts"
-const productContainer = document.querySelector(".container-posts")
+const baseUrl = "https://wordpress.relouding.eu/wp-json/wp/v2/posts?per_page=1"
+const postContainer = document.querySelector(".container-posts");
+const perPage = document.querySelector(".per-page-container");
 
 
 async function getBlogPosts(url){
-    const response = await fetch(url);
-    const posts = await response.json();
+    try {
+        const response = await fetch(url);
+        const posts = await response.json();
+
+        console.log(posts);
 
     posts.forEach(function(post){
-        productContainer.innerHTML += `
+        postContainer.innerHTML += `
         <div class="blog-posts">
         <div><h2>${post.title.rendered}</h2></div>
         <div><p>${post.content.rendered}</p></div>
         <div><a href="blogspecific.html?id=${post.id}">read more</a>
         </div>
         `
-    })
+      })
+    }
+
+    catch(error) {
+        console.log(error);
+        postContainer.innerHTML = message("error", error);
+    }
 }
 
 getBlogPosts(baseUrl);
+
+    perPage.onclick = function(){
+        const newUrl = "https://wordpress.relouding.eu/wp-json/wp/v2/posts" + "?per_page=3";
+        postContainer.innerHTML = "";
+        getBlogPosts(newUrl);
+}
