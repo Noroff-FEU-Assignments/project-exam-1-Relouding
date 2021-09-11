@@ -112,7 +112,7 @@ nav {
     color: #E8CC47;
 
     /* Font */
-    font-size: 50px;
+    font-size: 60px;
     font-family: MontserratB;
 
     /* Margin/Padding */
@@ -293,6 +293,13 @@ label {
     /* Placing */
     display: none;
 }
+
+/* Media rules */
+@media only screen and (max-width: 600px) {
+    .blog-name {
+      font-size: 30px;
+    }
+  }
 
 /* Fonts */
 @font-face {
