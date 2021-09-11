@@ -1,4 +1,4 @@
-const baseUrl = "https://wordpress.relouding.eu/wp-json/wp/v2/posts?per_page=1"
+const baseUrl = "https://wordpress.relouding.eu/wp-json/wp/v2/posts?per_page=10"
 const postContainer = document.querySelector(".container-posts");
 const perPage = document.querySelector(".per-page-container");
 
@@ -30,7 +30,9 @@ async function getBlogPosts(url){
 getBlogPosts(baseUrl);
 
     perPage.onclick = function(){
-        const newUrl = "https://wordpress.relouding.eu/wp-json/wp/v2/posts" + "?per_page=3";
+        const newUrl = "https://wordpress.relouding.eu/wp-json/wp/v2/posts";
+        const extraNewUrl = "https://wordpress.relouding.eu/wp-json/wp/v2/posts" + "?page=2";
         postContainer.innerHTML = "";
         getBlogPosts(newUrl);
+        getBlogPosts(extraNewUrl);
 }

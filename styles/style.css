@@ -158,12 +158,22 @@ h2 {
 }
 
 .blog-posts {
+    /* Color */
+    background-color: gray;
+    
+    /* Margin/Padding */
+    padding: 5px 10px 5px 10px;
+    margin: auto;
+    margin-top: 20px;
+
     /* Size */
     max-width: 100%;
     width: 1000px;
+    height: auto;
 
     /* Placing */
-    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: justify;
 }
 
 .blog-posts img {
@@ -196,7 +206,8 @@ h2 {
     width: 1000px;
 
     /* Placing */
-    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: justify;
 }
 
 /* Form style */
@@ -295,11 +306,12 @@ label {
 }
 
 .per-page {
+    /* Font */
     font-size: 15px;
 
     /* Margin/Padding */
     margin: auto;
-    padding: auto; 
+    padding: 5px 10px 50px 10px; 
     
     /* Size */
     max-width: 100%;
