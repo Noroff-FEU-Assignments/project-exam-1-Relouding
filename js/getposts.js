@@ -12,7 +12,7 @@ async function getBlogPosts(url){
 
     posts.forEach(function(post){
         postContainer.innerHTML += `
-        <div class="blog-posts">
+        <div class="blog-posts overflow">
         <div><h2>${post.title.rendered}</h2></div>
         <div><p>${post.content.rendered}</p></div>
         <div><a href="blogspecific.html?id=${post.id}">read more</a>
@@ -30,9 +30,9 @@ async function getBlogPosts(url){
 getBlogPosts(baseUrl);
 
     perPage.onclick = function(){
-        const newUrl = "https://wordpress.relouding.eu/wp-json/wp/v2/posts";
-        const extraNewUrl = "https://wordpress.relouding.eu/wp-json/wp/v2/posts" + "?page=2";
+        const firstPage = "https://wordpress.relouding.eu/wp-json/wp/v2/posts";
+        const secondPage = "https://wordpress.relouding.eu/wp-json/wp/v2/posts" + "?page=2";
         postContainer.innerHTML = "";
-        getBlogPosts(newUrl);
-        getBlogPosts(extraNewUrl);
+        getBlogPosts(firstPage);
+        getBlogPosts(secondPage);
 }

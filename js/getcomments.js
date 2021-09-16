@@ -9,7 +9,6 @@ async function getBlogComments(url){
     comments.forEach(function(comment){
         productContainer.innerHTML += `
         <div class="blog-comments">
-        <div>Comment by ${comment.author_name}:</div>
         <div><p>${comment.content.rendered}</p></div>
         </div>
         `

@@ -16,7 +16,7 @@ nav {
     /* Size */
     max-width: 100%;
     width: 100%;
-    height: 90px;
+    height: auto;
 
     /* Placing */
     top: 0;
@@ -118,6 +118,10 @@ nav {
     /* Margin/Padding */
     margin: auto;
 
+    /* Size */
+    height: auto;
+    width: auto;
+
     /* Placing */
     position: relative;
     display: inline-block;                  
@@ -140,6 +144,23 @@ h2 {
     font-size: 200%;
 }
 
+/* Container slideshow */
+#container {
+    /* Margin/Padding */
+    margin: auto;
+    padding: auto;
+
+    /* Size */
+    max-width: 100%;
+    width: 1000px;
+
+    /* Placing */
+    top: 100px;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
 /* Blog post style */
 .container-posts {
     /* Margin/Padding */
@@ -148,7 +169,7 @@ h2 {
 
     /* Size */
     max-width: 100%;
-    width: 800px;
+    width: 1000px;
 
     /* Placing */
     top: 100px;
@@ -159,7 +180,10 @@ h2 {
 
 .blog-posts {
     /* Color */
-    background-color: gray;
+    background-color: #F0F0F0;
+
+    /* Border */
+    border-radius: 2px;
     
     /* Margin/Padding */
     padding: 5px 10px 5px 10px;
@@ -167,8 +191,8 @@ h2 {
     margin-top: 20px;
 
     /* Size */
-    max-width: 100%;
-    width: 1000px;
+    max-width: 90%;
+    width: 800px;
     height: auto;
 
     /* Placing */
@@ -176,22 +200,51 @@ h2 {
     text-align: justify;
 }
 
+.blog-posts h2 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.blog-posts p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.blog-posts a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
 .blog-posts img {
-    /* Size */
-    max-width: 100%;
-    height: auto;
-    width: 1250px;
+    max-width:100%;
+    max-height:auto;
+    object-fit: contain;
+}
+
+.overflow p {
+    overflow: hidden;
+    max-height: 100px;
+}
+
+.overflow img {
+    display: none;
 }
 
 /* Comment post style */
 .container-comments {
     /* Margin/Padding */
     margin: auto;
-    padding: auto; 
+    padding: auto;
 
     /* Size */
     max-width: 100%;
-    width: 800px;
+    width: 1000px;
 
     /* Placing */
     top: 100px;
@@ -201,14 +254,56 @@ h2 {
 }
 
 .blog-comments {
+    /* Color */
+    background-color: #F0F0F0;
+
+    /* Border */
+    border-radius: 2px;
+    
+    /* Margin/Padding */
+    padding: 5px 10px 5px 10px;
+    margin: auto;
+    margin-top: 20px;
+
     /* Size */
-    max-width: 100%;
-    width: 1000px;
+    max-width: 90%;
+    width: 800px;
+    height: auto;
 
     /* Placing */
     overflow-wrap: break-word;
     text-align: justify;
 }
+
+/* Slideshow */
+.image-carousel {
+    display: flex;
+    max-width: 1000px;
+    margin: auto;
+    padding-top: 100px;
+    background: #FFF;
+  }
+  
+  figure {
+    margin: 0px;
+    flex: 1;
+    overflow: hidden;
+    transition: 1s all;
+    opacity: 0.5;
+  }
+  
+  figure:hover {
+    cursor: pointer;
+  }
+  
+  img {
+    height: 500px;
+  }
+  
+  .selected-image {
+    flex: 5;
+    opacity: 1;
+  }
 
 /* Form style */
 .container-form {
@@ -305,20 +400,36 @@ label {
     display: none;
 }
 
+.per-page-container {
+    /* Margin/Padding */
+    margin: auto;
+    padding: auto;
+    
+    /* Size */
+    max-width: 100%;
+    width: 1000px;
+    
+    /* Placing */
+    top: 100px;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
 .per-page {
     /* Font */
     font-size: 15px;
 
     /* Margin/Padding */
     margin: auto;
-    padding: 5px 10px 50px 10px; 
+    padding: 5px 10px 5px 10px;
     
     /* Size */
-    max-width: 100%;
+    max-width: 90%;
     width: 800px;
+    height: auto;
     
     /* Placing */
-    top: 100px;
     display: block;
     position: relative;
     z-index: 2;
