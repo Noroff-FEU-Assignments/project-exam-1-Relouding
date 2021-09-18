@@ -1,4 +1,3 @@
-
 const detailContainer = document.querySelector(".container-posts");
 
 const queryString = document.location.search;

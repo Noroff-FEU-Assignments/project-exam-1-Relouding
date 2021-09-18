@@ -30,7 +30,7 @@ async function getBlogPosts(url){
 getBlogPosts(baseUrl);
 
     perPage.onclick = function(){
-        const firstPage = "https://wordpress.relouding.eu/wp-json/wp/v2/posts" + "?per_page=100";
+        const secondUrl = "https://wordpress.relouding.eu/wp-json/wp/v2/posts" + "?per_page=99";
         postContainer.innerHTML = "";
-        getBlogPosts(firstPage);
+        getBlogPosts(secondUrl);
 }

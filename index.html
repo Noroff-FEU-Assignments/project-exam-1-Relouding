@@ -3,6 +3,7 @@
 <head>
   <meta name="description" content="home page">
   <link rel="stylesheet" type="text/css" href="./styles/style.css">
+  <link rel="stylesheet" type="text/css" href="./styles/slideshow.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home</title>
 
@@ -38,15 +39,27 @@
       </div>
   </nav>
 
-  <section class="image-carousel">
-  </section>
+  <!-- Slideshow container -->
+  <div class="slide-container">
 
-<footer>
-</footer>
+    <!-- Slides -->
+    <div class="slides fade">
+      <img src="/images/header-image.png">
+      <div class="text">WELCOME TO GAMEHUB</div>
+    </div>
+
+      <!-- Buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+  <footer>
+    <div class="footer">GameHub Copyright © 2021</div>
+    <div class="footer"><a href="#">Privacy policy</a></div>
+    <div class="footer"><a href="contact.html">Contact us</a></div>
+  </footer>
 
 <script src="js/slideshow.js"></script>
-<script src="js/slidegetposts.js"></script>
-<script src="js/slidegetposts2.js"></script>
 <script src="https://kit.fontawesome.com/1a5da3d949.js" crossorigin="anonymous"></script>
 
 </body>
