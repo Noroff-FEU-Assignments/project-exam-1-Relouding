@@ -8,15 +8,28 @@ async function getBlogPosts(url){
 
         console.log(posts);
 
-    posts.forEach(function(post) {
-        postContainer.innerHTML += `
-        <div class="slides fade">
-        <a href="blogspecific.html?id=${post.id}"><img src="${post.better_featured_image.source_url}"></a>
-        <div class="text">${post.title.rendered}</div>
-        </div>
-        `
-      })
-    }
+        posts.forEach(function(post) {
+          if(post.id == 71){
+          postContainer.innerHTML += `
+          <div class="slides fade" style="display: block;">
+          <a href="blogspecific.html?id=${post.id}"><img src="${post.better_featured_image.source_url}"></a>
+          <div class="text">${post.title.rendered}</div>
+          </div>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          `
+          }else{
+          postContainer.innerHTML += `
+          <div class="slides fade">
+          <a href="blogspecific.html?id=${post.id}"><img src="${post.better_featured_image.source_url}"></a>
+          <div class="text">${post.title.rendered}</div>
+          </div>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          `
+          }
+          })
+        }
 
     catch(error) {
         console.log(error);
