@@ -36,7 +36,7 @@ fetchPost();
 function createHtml(post) {
     document.title = `${post.title.rendered}`;
     detailContainer.innerHTML = `
-        <div class="blog-posts">
+        <div class="blog-posts image">
         <div><h1>${post.title.rendered}</h1></div>
         <div><p>${post.content.rendered}</p></div>
         <img src="${post.better_featured_image.source_url}" alt="${post.title.rendered}">
@@ -44,3 +44,14 @@ function createHtml(post) {
         </div>
     `;
 }
+
+function getFullScreen() {}
+const imgs = document.querySelectorAll('.image img');
+const fullPage = document.querySelector('#fullpage');
+
+imgs.forEach(img => {
+  img.addEventListener('click', function() {
+    fullPage.style.backgroundImage = 'url(' + img.src + ')';
+    fullPage.style.display = 'block';
+  });
+});
