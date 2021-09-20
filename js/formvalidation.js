@@ -7,6 +7,7 @@ const subject = document.querySelector("#subject");
 const subjectError = document.querySelector("#subjectError");
 const message = document.querySelector("#message");
 const messageError = document.querySelector("#messageError");
+const infoContainer = document.getElementById("info");
 
 function validateForm(event) {
     event.preventDefault();

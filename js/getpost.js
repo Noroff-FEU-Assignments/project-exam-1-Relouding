@@ -36,9 +36,9 @@ fetchPost();
 function createHtml(post) {
     detailContainer.innerHTML = `
         <div class="blog-posts">
-        <div><h2>${post.title.rendered}</h2></div>
+        <div><h1>${post.title.rendered}</h1></div>
         <div><p>${post.content.rendered}</p></div>
-        <img src="${post.better_featured_image.source_url}">
+        <img src="${post.better_featured_image.source_url}" alt="${post.title.rendered}">
         </div>
     `;
 }

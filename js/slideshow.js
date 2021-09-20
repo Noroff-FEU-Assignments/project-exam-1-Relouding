@@ -12,7 +12,7 @@ async function getBlogPosts(url){
           if(post.id == 71){
           postContainer.innerHTML += `
           <div class="slides fade" style="display: block;">
-          <a href="blogspecific.html?id=${post.id}"><img src="${post.better_featured_image.source_url}"></a>
+          <a href="blogspecific.html?id=${post.id}"><img src="${post.better_featured_image.source_url}" alt="${post.title.rendered}"></a>
           <div class="text">${post.title.rendered}</div>
           </div>
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
