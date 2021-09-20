@@ -34,11 +34,13 @@ async function fetchPost() {
 fetchPost();
 
 function createHtml(post) {
+    document.title = `${post.title.rendered}`;
     detailContainer.innerHTML = `
         <div class="blog-posts">
         <div><h1>${post.title.rendered}</h1></div>
         <div><p>${post.content.rendered}</p></div>
         <img src="${post.better_featured_image.source_url}" alt="${post.title.rendered}">
+        <p>&#9998; ${new Date(post.date).toLocaleString()}</p>
         </div>
     `;
 }
