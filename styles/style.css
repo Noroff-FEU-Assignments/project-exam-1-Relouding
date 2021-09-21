@@ -73,6 +73,9 @@ nav {
     display: none;
     position: absolute;
     z-index: 1;
+
+    /* Animation */
+    transition: transform .5s;
 }
   
 .dropdown-content a {
@@ -200,8 +203,10 @@ h2 {
 
     /* Placing */
     top: 100px;
-    display: block;
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     z-index: 2;
 }
 
@@ -225,6 +230,14 @@ h2 {
     /* Placing */
     overflow-wrap: break-word;
     text-align: justify;
+
+    /* Animation */
+    transition: transform .5s;
+}
+
+.blog-posts:hover {
+    /* Animation */
+    transform: scale(1.01);
 }
 
 .blog-posts h2 {
@@ -253,17 +266,15 @@ h2 {
 
 .blog-posts img {
     /* Margin/Padding */
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-right: 5px;
-    margin-left: 5px;
-
+    margin: auto;
+    
     /* Size */
     max-width: 100%;
     max-height: auto;
     width: 790px;
     height: auto;
     object-fit: contain;
+    display: block;
 }
 
 .overflow p {
@@ -366,7 +377,16 @@ h2 {
 }
 
 .recent-posts img {
+    /* Size */
     width: 100%;
+
+    /* Animation */
+    transition: transform .5s;
+}
+
+.recent-posts:hover img {
+    /* Animation */
+    transform: scale(1.01);
 }
 
 /* Container style */
@@ -465,6 +485,54 @@ h2 {
 .container-div p {
     overflow-wrap: break-word;
     text-align: justify;
+}
+
+/* category post style */
+.container-category {
+    /* Margin/Padding */
+    margin: auto;
+    padding: auto;
+
+    /* Size */
+    max-width: 100%;
+    width: 820px;
+
+    /* Placing */
+    top: 100px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.category-posts {
+    /* Color */
+    background-color: #F0F0F0;
+
+    /* Border */
+    border-radius: 2px;
+    
+    /* Margin/Padding */
+    padding: 5px 10px 5px 10px;
+    margin: auto;
+    margin-top: 10px;
+
+    /* Size */
+    max-width: 100%;
+    width: 820px;
+    height: auto;
+
+    /* Placing */
+    overflow-wrap: break-word;
+    text-align: justify;
+}
+
+.category-posts h2 {
+    font-size: 15px;
+}
+.category-posts p {
+    font-size: 15px;
 }
 
 /* Fullscreen */
