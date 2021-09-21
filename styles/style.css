@@ -161,6 +161,7 @@ footer {
     /* Font */
     font-size: 60px;
     font-family: MontserratB;
+    text-decoration: none;
 
     /* Margin/Padding */
     margin: auto;
