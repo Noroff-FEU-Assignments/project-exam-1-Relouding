@@ -231,14 +231,6 @@ h2 {
     /* Placing */
     overflow-wrap: break-word;
     text-align: justify;
-
-    /* Animation */
-    transition: transform .5s;
-}
-
-.blog-posts:hover {
-    /* Animation */
-    transform: scale(1.01);
 }
 
 .blog-posts h2 {
@@ -380,12 +372,14 @@ h2 {
 .recent-posts img {
     /* Size */
     width: 100%;
+}
 
+.animation {
     /* Animation */
     transition: transform .5s;
 }
 
-.recent-posts:hover img {
+.animation:hover {
     /* Animation */
     transform: scale(1.01);
 }
@@ -597,7 +591,6 @@ input {
 
     /* Margin/Padding */
     margin: auto;
-    margin-top: 2px;
     padding: 10px;
 
     /* Size */
@@ -650,6 +643,21 @@ label {
 .form-error {
     /* Color */
     color: red;
+
+    /* Font */
+    font-size: 80%;
+
+    /* Margin/Padding */
+    margin-top: 2px;
+    margin-bottom: 15px;
+
+    /* Placing */
+    display: none;
+}
+
+.form-ok {
+    /* Color */
+    color: green;
 
     /* Font */
     font-size: 80%;
@@ -728,14 +736,20 @@ label {
     .blog-posts h1 {
       font-size: 20px;
     }
+    .blog-posts h2 {
+      font-size: 20px;
+    }
+    .blog-posts p {
+      font-size: 15px;
+    }
     .container-div p {
       margin-right: 10px;
       margin-left: 10px;
     }
     .container-div h2 {
-        margin-right: 10px;
-        margin-left: 10px;
-      }
+      margin-right: 10px;
+      margin-left: 10px;
+      } 
   }
 
 /* Fonts */
