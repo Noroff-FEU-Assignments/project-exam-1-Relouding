@@ -38,20 +38,30 @@ function createHtml(post) {
     detailContainer.innerHTML = `
         <div class="blog-posts image">
         <div><h1>${post.title.rendered}</h1></div>
-        <img class="animation" src="${post.better_featured_image.source_url}" alt="${post.title.rendered}">
+        <img id="myImg" class="animation fullscreen" src="${post.better_featured_image.source_url}" alt="${post.title.rendered}">
         <div><p>${post.content.rendered}</p></div>
         <p>&#9998; ${new Date(post.date).toLocaleString()}</p>
         </div>
     `;
+    clickScreenshot();
 }
 
-function getFullScreen() {}
-const imgs = document.querySelectorAll('.image img');
-const fullPage = document.querySelector('#fullpage');
-imgs.forEach(img => {
-  img.addEventListener('click', function() {
-      console.log()
-    fullPage.style.backgroundImage = 'url(' + img.src + ')';
-    fullPage.style.display = 'block';
-  });
-});
+// Get the modal
+var modal = document.getElementById("myModal");
+
+function clickScreenshot() {
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+};
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+};}
