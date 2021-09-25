@@ -7,36 +7,45 @@ const subject = document.querySelector("#subject");
 const subjectError = document.querySelector("#subjectError");
 const message = document.querySelector("#message");
 const messageError = document.querySelector("#messageError");
+const formOkMessage = document.querySelector("#message");
+const formOkError = document.querySelector("#messageError");
 const infoContainer = document.getElementById("info");
-const formOk = document.querySelector("#form-ok");
-const formOkContainer = document.getElementById("info");
 
 function validateForm(event) {
+    var formError = false;
     event.preventDefault();
 
     if (checkLength(userName.value, 5) === true) {
         userNameError.style.display = "none";
     } else {
         userNameError.style.display = "block";
+        formError = true;
     }
 
     if (validateEmail(email.value) === true) {
         emailError.style.display = "none";
     } else {
         emailError.style.display = "block";
+        formError = true;
     }
 
     if (checkLength(subject.value, 15) === true) {
         subjectError.style.display = "none";
     } else {
         subjectError.style.display = "block";
+        formError = true;
     }
 
     if (checkLength(message.value, 25) === true) {
         messageError.style.display = "none";
     } else {
         messageError.style.display = "block";
-    } 
+        formError = true;
+    }
+
+    if (formError == false) {
+        formOk.style.display = "block";
+    }
 }
 
 form.addEventListener("submit", validateForm);
