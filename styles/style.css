@@ -185,7 +185,15 @@ footer {
 
     /* Placing */
     position: relative;
-    display: inline-block;                  
+    display: inline-block;
+
+    /* Animation */
+    transition: transform .5s;               
+}
+
+.blog-name:hover {
+    /* Animation */
+    transform: scale(1.005);
 }
 
 /* Font styles */
@@ -203,6 +211,27 @@ h1 {
 h2 {
     font-family: MontserratB;
     font-size: 200%;
+}
+
+/* Animation */
+.animation {
+    /* Animation */
+    transition: transform .5s;
+}
+
+.animation:hover {
+    /* Animation */
+    transform: scale(1.01);
+}
+
+/* Overflow */
+.overflow p {
+    overflow: hidden;
+    max-height: 100px;
+}
+
+.overflow img {
+    display: none;
 }
 
 /* Blog post style */
@@ -281,15 +310,6 @@ h2 {
     height: auto;
     object-fit: contain;
     display: block;
-}
-
-.overflow p {
-    overflow: hidden;
-    max-height: 100px;
-}
-
-.overflow img {
-    display: none;
 }
 
 /* Comment post style */
@@ -385,17 +405,6 @@ h2 {
 .recent-posts img {
     /* Size */
     width: 100%;
-}
-
-/* Animation */
-.animation {
-    /* Animation */
-    transition: transform .5s;
-}
-
-.animation:hover {
-    /* Animation */
-    transform: scale(1.01);
 }
 
 /* Container style */
