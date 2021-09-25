@@ -1,18 +1,8 @@
 const commentContainer = document.querySelector(".container-comments");
 
-const queryString = document.location.search;
-
-const params = new URLSearchParams(queryString);
-
-const id = params.get("id");
-
-console.log(id);
-
-
-const baseUrl = "https://wordpress.relouding.eu/wp-json/wp/v2/posts/comments";
+const baseUrl = "https://wordpress.relouding.eu/wp-json/wp/v2/comments?post=" + id;
 
 console.log(baseUrl);
-
 
 async function getBlogComments(url){
     const response = await fetch(url);
@@ -20,15 +10,16 @@ async function getBlogComments(url){
 
     console.log(comments);
 
-    comments.forEach(function(comment) {
-        if(comment.post == 69){
-        commentContainer.innerHTML += `
+    comments.forEach(function(comment){
+      commentContainer.innerHTML += `
         <div class="blog-comments">
-        <div><p>${comment.content.rendered}test</p></div>
+        <div>${comment.author_name}:</div>
+        <div><p>${comment.content.rendered}</p></div>
+        <div><p>&#9998; ${new Date(comment.date).toLocaleString()}</p></div>
         </div>
         `
+      })
     }
-  })
-}
+
 
 getBlogComments(baseUrl);
