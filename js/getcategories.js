@@ -11,9 +11,7 @@ async function getCategoryPosts(url){
         posts.forEach(function(post){
             categoryContainer.innerHTML += `
             <div class="category-posts">
-            <img class="animation" src="${post.better_featured_image.source_url}" alt="${post.title.rendered}">
-            <div class="categoy-text"><h2>${post.title.rendered}</h2>
-            <a href="blogspecific.html?id=${post.id}">read more</a>
+            <a href="blogspecific.html?id=${post.id}"><img class="animation" src="${post.better_featured_image.source_url}"></a>
             </div>
             `
           })

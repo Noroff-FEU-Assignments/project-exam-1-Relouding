@@ -2,6 +2,9 @@
 
 /* Slideshow container */
 .slide-container {
+    /* Border */
+    border-radius: 20px;
+
     /* Margin/Padding */
     margin: auto;
 
@@ -14,7 +17,11 @@
 }
 
 .slide-container img{
-    width:100%
+    /* Border */
+    border-radius: 2px;
+
+    /* Size */
+    width:100%;
 }
 
 .slides {
@@ -49,15 +56,23 @@
 
     /* Animation */
     transition: 0.5s ease;
+    opacity: 0.5;
 }
 
 .next {
-    right: 0;
+    /* Border */
     border-radius: 2px;
+
+    /* Placing */
+    right: 0;
 }
 
 .prev:hover, .next:hover {
+    /* Color */
     background-color: #21A487;
+
+    /* Animation */
+    opacity: 1;
 }
 
 .text {
@@ -83,18 +98,18 @@
 /* Animation */
 .fade {
     -webkit-animation-name: fade;
-    -webkit-animation-duration: 2s;
+    -webkit-animation-duration: 5s;
     animation-name: fade;
-    animation-duration: 2s;
+    animation-duration: 5s;
 }
 
 @-webkit-keyframes fade {
-    from {opacity: .2}
+    from {opacity: .3}
     to {opacity: 1}
 }
 
 @keyframes fade {
-    from {opacity: .2}
+    from {opacity: .3}
     to {opacity: 1}
 }
 
